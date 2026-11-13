@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed,500,50,document_id;source;page;chapter,none,google/embeddinggemma-2,Baseline fixed windows,0.4,0.6,0.6,0.6,Retrospective summary of saved runs;162 chunks
+B,heading_sentence_heuristic,1000,0,document_id;source;page;chapter,none,google/embeddinggemma-2,Structured chunks may preserve evidence,0.6,0.7333333333333333,0.8,0.8,Retrospective summary of saved runs;85 chunks
+C,heading_sentence_heuristic,1000,0,document_id;source;page;chapter,explicit query filter,google/embeddinggemma-2,Metadata filtering may improve scope compliance,0.6,0.7333333333333333,0.8,0.8,Retrospective summary of saved runs;85 chunks;reuses B vectors;selected before test

@@ -1,0 +1,1548 @@
+[
+  {
+    "id": "Q16",
+    "split": "test",
+    "question": "Trong chương 4, việc gói một đoạn mã vào một hàm được gọi là gì?",
+    "expected_answer": "Encapsulation (đóng gói).",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 54,
+    "evidence_quote": "Wrapping a piece of code up in a function is calledencapsulation.",
+    "alternative_gold": [],
+    "requested_filter": {
+      "chapter": 4
+    },
+    "hit_at_1": false,
+    "evidence_hit_at_3": false,
+    "hits": [
+      {
+        "chunk_id": "987d50fd9cfd261f796674cbb26bb2d9fc27ce19bb3cb27fbe91bb3045e18016",
+        "text": "on is calledencapsulation. One of the benefits of\nencapsulation is that it attaches a name to the code, which serves as a kind of documenta-\ntion. Another advantage is that if you re-use the code, it is more concise to call a function\ntwice than to copy and paste the body!\n4.5 Generalization\nThe next step is to add alengthparameter tosquare. Here is a solution:\ndef square(t, length):\nfor i in range(4):\nt.fd(length)\nt.lt(90)\nsquare(bob, 100)\nAdding a parameter to a function is calledgeneralizatio",
+        "metadata": {
+          "page": 54,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p054",
+          "char_end": 1400,
+          "char_start": 900,
+          "document_id": "thinkpython2",
+          "chunk_method": "fixed-v1-500-50",
+          "printed_page": 32,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7403327094913658,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "4cd51517e14a44ebf4e9b5fe92fba58c1d9b09fd9cd0077343322289360effec",
+        "text": "32 Chapter 4. Case study: interface design\n4.4 Encapsulation\nThe first exercise asks you to put your square-drawing code into a function definition and\nthen call the function, passing the turtle as a parameter. Here is a solution:\ndef square(t):\nfor i in range(4):\nt.fd(100)\nt.lt(90)\nsquare(bob)\nThe innermost statements,fdandltare indented twice to show that they are inside the\nforloop, which is inside the function definition. The next line,square(bob), is flush with\nthe left margin, which indica",
+        "metadata": {
+          "page": 54,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p054",
+          "char_end": 500,
+          "char_start": 0,
+          "document_id": "thinkpython2",
+          "chunk_method": "fixed-v1-500-50",
+          "printed_page": 32,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7393102205210805,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "67a066d3338436f0e6a80de10e98740fdc12f82469cd886ed9aeeaf7cd831073",
+        "text": "26 Chapter 3. Functions\nbody:The sequence of statements inside a function definition.\nparameter:A name used inside a function to refer to the value passed as an argument.\nfunction call:A statement that runs a function. It consists of the function name followed\nby an argument list in parentheses.\nargument:A value provided to a function when the function is called. This value is as-\nsigned to the corresponding parameter in the function.\nlocal variable:A variable defined inside a function. A local",
+        "metadata": {
+          "page": 48,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 3,
+          "page_id": "thinkpython2-p048",
+          "char_end": 499,
+          "char_start": 0,
+          "document_id": "thinkpython2",
+          "chunk_method": "fixed-v1-500-50",
+          "printed_page": 26,
+          "chapter_title": "Functions",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7277476353795759,
+        "automatic_evidence_match": false
+      }
+    ],
+    "human_grounding_0_2": 2,
+    "human_reason": "The top three contain the function-wrapping example and the term encapsulation.",
+    "strategy": "A",
+    "applied_filter": null,
+    "search_seconds": 0.1781184999999823,
+    "metadata_review": [
+      {
+        "chunk_id": "987d50fd9cfd261f796674cbb26bb2d9fc27ce19bb3cb27fbe91bb3045e18016",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "4cd51517e14a44ebf4e9b5fe92fba58c1d9b09fd9cd0077343322289360effec",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "67a066d3338436f0e6a80de10e98740fdc12f82469cd886ed9aeeaf7cd831073",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      }
+    ],
+    "review_status": "AUTHOR_REVIEWED",
+    "reviewed_by": "Lưu Văn Việt Đức"
+  },
+  {
+    "id": "Q17",
+    "split": "test",
+    "question": "Khi một hàm có nhiều đối số số học và dễ quên thứ tự, sách đề xuất cách gọi nào?",
+    "expected_answer": "Ghi tên tham số trong lời gọi, tức keyword arguments, ví dụ polygon(bob, n=7, length=70).",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 55,
+    "evidence_quote": "When a function has more than a few numeric arguments, it is easy to forget what they are, or what order they should be in. In that case it is often a good idea to include the names of the parameters in the argument list: polygon(bob, n=7, length=70)",
+    "alternative_gold": [],
+    "requested_filter": null,
+    "hit_at_1": false,
+    "evidence_hit_at_3": false,
+    "hits": [
+      {
+        "chunk_id": "427f040d2e6b9fb722b5d5c455b67e2125bd4c47d0c3fc1136ce8b1fcfbc329a",
+        "text": "22 Chapter 3. Functions\n>>> print_twice('Spam')\nSpam\nSpam\n>>> print_twice(42)\n42\n42\n>>> print_twice(math.pi)\n3.14159265359\n3.14159265359\nThe same rules of composition that apply to built-in functions also apply to programmer-\ndefined functions, so we can use any kind of expression as an argument forprint_twice:\n>>> print_twice('Spam'*4)\nSpam Spam Spam Spam\nSpam Spam Spam Spam\n>>> print_twice(math.cos(math.pi))\n-1.0\n-1.0\nThe argument is evaluated before the function is called, so in the examples",
+        "metadata": {
+          "page": 44,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 3,
+          "page_id": "thinkpython2-p044",
+          "char_end": 499,
+          "char_start": 0,
+          "document_id": "thinkpython2",
+          "chunk_method": "fixed-v1-500-50",
+          "printed_page": 22,
+          "chapter_title": "Functions",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7195434046880234,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "ab3ee05ec387706cca6d8c39af348239a32b8b7ca47ddaa6599a524dee357a3c",
+        "text": "is worth the trouble to divide a program into functions. There\nare several reasons:",
+        "metadata": {
+          "page": 46,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 3,
+          "page_id": "thinkpython2-p046",
+          "char_end": 1883,
+          "char_start": 1800,
+          "document_id": "thinkpython2",
+          "chunk_method": "fixed-v1-500-50",
+          "printed_page": 24,
+          "chapter_title": "Functions",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7118894548679697,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "ab2cfefb82891efe2672bdd32df5bcb0831f2cc60f3fd07c644867741b50d309",
+        "text": "f the functions we have used, such as the math functions, return results; for lack of\na better name, I call themfruitful functions. Other functions, likeprint_twice, perform\nan action but don’t return a value. They are calledvoid functions.\nWhen you call a fruitful function, you almost always want to do something with the result;\nfor example, you might assign it to a variable or use it as part of an expression:\nx = math.cos(radians)\ngolden = (math.sqrt(5) + 1) / 2\nWhen you call a function in int",
+        "metadata": {
+          "page": 46,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 3,
+          "page_id": "thinkpython2-p046",
+          "char_end": 950,
+          "char_start": 450,
+          "document_id": "thinkpython2",
+          "chunk_method": "fixed-v1-500-50",
+          "printed_page": 24,
+          "chapter_title": "Functions",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7001681267914558,
+        "automatic_evidence_match": false
+      }
+    ],
+    "human_grounding_0_2": 0,
+    "human_reason": "The retrieved passages do not support the keyword-argument solution.",
+    "strategy": "A",
+    "applied_filter": null,
+    "search_seconds": 0.03626750000694301,
+    "metadata_review": [
+      {
+        "chunk_id": "427f040d2e6b9fb722b5d5c455b67e2125bd4c47d0c3fc1136ce8b1fcfbc329a",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "ab3ee05ec387706cca6d8c39af348239a32b8b7ca47ddaa6599a524dee357a3c",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "ab2cfefb82891efe2672bdd32df5bcb0831f2cc60f3fd07c644867741b50d309",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      }
+    ],
+    "review_status": "AUTHOR_REVIEWED",
+    "reviewed_by": "Lưu Văn Việt Đức"
+  },
+  {
+    "id": "Q18",
+    "split": "test",
+    "question": "Một giao diện hàm sạch giúp người gọi sử dụng hàm như thế nào?",
+    "expected_answer": "Cho phép người gọi làm điều họ muốn mà không phải xử lý các chi tiết không cần thiết.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 55,
+    "evidence_quote": "An interface is “clean” if it allows the caller to do what they want without dealing with unnecessary details.",
+    "alternative_gold": [],
+    "requested_filter": null,
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "chunk_id": "e01f8f81a01595a35a233cc1027bff946910b56015858981a0ca075d91a7095f",
+        "text": "akingnas a parameter.\nThis would give the user (whoever callscircle) more control, but the interface would be\nless clean.\nTheinterfaceof a function is a summary of how it is used: what are the parameters? What\ndoes the function do? And what is the return value? An interface is “clean” if it allows the\ncaller to do what they want without dealing with unnecessary details.\nIn this example,rbelongs in the interface because it specifies the circle to be drawn.nis\nless appropriate because it pertains",
+        "metadata": {
+          "page": 55,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p055",
+          "char_end": 2299,
+          "char_start": 1800,
+          "document_id": "thinkpython2",
+          "chunk_method": "fixed-v1-500-50",
+          "printed_page": 33,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7412670254707336,
+        "automatic_evidence_match": true
+      },
+      {
+        "chunk_id": "707d62e0f1793f90acc0ba10ac83cc0e61267ce85ed32979a2897ac5a8ccf0af",
+        "text": "ign. A well-\ndesigned interface should be simple to explain; if you have a hard time explaining one\nof your functions, maybe the interface could be improved.\n4.10 Debugging\nAn interface is like a contract between a function and a caller. The caller agrees to provide\ncertain parameters and the function agrees to do certain work.\nFor example,polylinerequires four arguments:thas to be a Turtle;nhas to be an integer;\nlengthshould be a positive number; andanglehas to be a number, which is understood",
+        "metadata": {
+          "page": 58,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p058",
+          "char_end": 949,
+          "char_start": 450,
+          "document_id": "thinkpython2",
+          "chunk_method": "fixed-v1-500-50",
+          "printed_page": 36,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7320700883865356,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "ce24105f55c8f8e298ee22e5f1fcf8eb9418529afb0a86d70b434347392c49ca",
+        "text": "36 Chapter 4. Case study: interface design\nIt is terse, but it contains the essential information someone would need to use this func-\ntion. It explains concisely what the function does (without getting into the details of how\nit does it). It explains what effect each parameter has on the behavior of the function and\nwhat type each parameter should be (if it is not obvious).\nWriting this kind of documentation is an important part of interface design. A well-\ndesigned interface should be simple t",
+        "metadata": {
+          "page": 58,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p058",
+          "char_end": 500,
+          "char_start": 0,
+          "document_id": "thinkpython2",
+          "chunk_method": "fixed-v1-500-50",
+          "printed_page": 36,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.6985610486792317,
+        "automatic_evidence_match": false
+      }
+    ],
+    "human_grounding_0_2": 2,
+    "human_reason": "The clean-interface definition and avoidance of unnecessary details are present.",
+    "strategy": "A",
+    "applied_filter": null,
+    "search_seconds": 0.06224569999903906,
+    "metadata_review": [
+      {
+        "chunk_id": "e01f8f81a01595a35a233cc1027bff946910b56015858981a0ca075d91a7095f",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "707d62e0f1793f90acc0ba10ac83cc0e61267ce85ed32979a2897ac5a8ccf0af",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "ce24105f55c8f8e298ee22e5f1fcf8eb9418529afb0a86d70b434347392c49ca",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      }
+    ],
+    "review_status": "AUTHOR_REVIEWED",
+    "reviewed_by": "Lưu Văn Việt Đức"
+  },
+  {
+    "id": "Q19",
+    "split": "test",
+    "question": "Docstring nằm ở đâu và dùng để giải thích điều gì?",
+    "expected_answer": "Là chuỗi ở đầu hàm, giải thích giao diện của hàm.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 57,
+    "evidence_quote": "Adocstringis a string at the beginning of a function that explains the interface",
+    "alternative_gold": [],
+    "requested_filter": null,
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "chunk_id": "80e213dcd90c4f57a895c270af45a445b78dd4037aa903d59aa07a645ca4d083",
+        "text": "backs—we will see alternatives later—but it can be useful if\nyou don’t know ahead of time how to divide the program into functions. This approach\nlets you design as you go along.\n4.9 docstring\nAdocstringis a string at the beginning of a function that explains the interface (“doc” is\nshort for “documentation”). Here is an example:\ndef polyline(t, n, length, angle):\n\"\"\"Draws n line segments with the given length and\nangle (in degrees) between them. t is a turtle.\n\"\"\"\nfor i in range(n):\nt.fd(length",
+        "metadata": {
+          "page": 57,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p057",
+          "char_end": 1850,
+          "char_start": 1350,
+          "document_id": "thinkpython2",
+          "chunk_method": "fixed-v1-500-50",
+          "printed_page": 35,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7358515481904614,
+        "automatic_evidence_match": true
+      },
+      {
+        "chunk_id": "ce24105f55c8f8e298ee22e5f1fcf8eb9418529afb0a86d70b434347392c49ca",
+        "text": "36 Chapter 4. Case study: interface design\nIt is terse, but it contains the essential information someone would need to use this func-\ntion. It explains concisely what the function does (without getting into the details of how\nit does it). It explains what effect each parameter has on the behavior of the function and\nwhat type each parameter should be (if it is not obvious).\nWriting this kind of documentation is an important part of interface design. A well-\ndesigned interface should be simple t",
+        "metadata": {
+          "page": 58,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p058",
+          "char_end": 500,
+          "char_start": 0,
+          "document_id": "thinkpython2",
+          "chunk_method": "fixed-v1-500-50",
+          "printed_page": 36,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.6922240830459597,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "136b53af72a55ff913bdec9b8a2144972b5c2fa3d9dc0bbdbb056938840ce7c2",
+        "text": "4.12. Exercises 37\nFigure 4.1: Turtle flowers.\nFigure 4.2: Turtle pies.\ndocstring:A string that appears at the top of a function definition to document the func-\ntion’s interface.\nprecondition:A requirement that should be satisfied by the caller before a function starts.\npostcondition:A requirement that should be satisfied by the function before it ends.\n4.12 Exercises\nExercise 4.1.Download the code in this chapter fromhttps: // thinkpython. com/ code/\npolygon. py.\n1. Draw a stack diagram that s",
+        "metadata": {
+          "page": 59,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p059",
+          "char_end": 500,
+          "char_start": 0,
+          "document_id": "thinkpython2",
+          "chunk_method": "fixed-v1-500-50",
+          "printed_page": 37,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.6879775133126236,
+        "automatic_evidence_match": false
+      }
+    ],
+    "human_grounding_0_2": 2,
+    "human_reason": "The location of a docstring and its interface-documentation purpose are present.",
+    "strategy": "A",
+    "applied_filter": null,
+    "search_seconds": 0.03015189999132417,
+    "metadata_review": [
+      {
+        "chunk_id": "80e213dcd90c4f57a895c270af45a445b78dd4037aa903d59aa07a645ca4d083",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "ce24105f55c8f8e298ee22e5f1fcf8eb9418529afb0a86d70b434347392c49ca",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "136b53af72a55ff913bdec9b8a2144972b5c2fa3d9dc0bbdbb056938840ce7c2",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      }
+    ],
+    "review_status": "AUTHOR_REVIEWED",
+    "reviewed_by": "Lưu Văn Việt Đức"
+  },
+  {
+    "id": "Q20",
+    "split": "test",
+    "question": "Theo phần Debugging của chương 4, nếu preconditions được đáp ứng nhưng postconditions không đạt thì lỗi nằm ở đâu?",
+    "expected_answer": "Lỗi nằm trong hàm.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 58,
+    "evidence_quote": "If the preconditions are satisfied and the postconditions are not, the bug is in the function.",
+    "alternative_gold": [],
+    "requested_filter": {
+      "chapter": 4
+    },
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "chunk_id": "fdfffdf91e91e088079a93d70733bc448c7c6f93a34912fd8907eea850967c87",
+        "text": "y of the caller. If the caller violates a (properly docu-\nmented!) precondition and the function doesn’t work correctly, the bug is in the caller, not\nthe function.\nIf the preconditions are satisfied and the postconditions are not, the bug is in the function.\nIf your pre- and postconditions are clear, they can help with debugging.\n4.11 Glossary\nmethod:A function that is associated with an object and called using dot notation.\nloop:A part of a program that can run repeatedly.\nencapsulation:The pr",
+        "metadata": {
+          "page": 58,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p058",
+          "char_end": 1850,
+          "char_start": 1350,
+          "document_id": "thinkpython2",
+          "chunk_method": "fixed-v1-500-50",
+          "printed_page": 36,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.794224751339869,
+        "automatic_evidence_match": true
+      },
+      {
+        "chunk_id": "5304a5e971b0dcb7b9e181792cc9df56dad7bb2b91848f2a7882669fb0f1e74c",
+        "text": ".\nDebugging is also like an experimental science. Once you have an idea about what is going\nwrong, you modify your program and try again. If your hypothesis was correct, you can\npredict the result of the modification, and you take a step closer to a working program. If\nyour hypothesis was wrong, you have to come up with a new one. As Sherlock Holmes\npointed out, “When you have eliminated the impossible, whatever remains, however im-\nprobable, must be the truth.” (A. Conan Doyle,The Sign of Four)",
+        "metadata": {
+          "page": 47,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 3,
+          "page_id": "thinkpython2-p047",
+          "char_end": 1400,
+          "char_start": 900,
+          "document_id": "thinkpython2",
+          "chunk_method": "fixed-v1-500-50",
+          "printed_page": 25,
+          "chapter_title": "Functions",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7198928928502977,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "5e1bd2384199506b78024b00be1820d45a25a6ef1a03b5f4d023c67a2d13a9ba",
+        "text": "ties beyond programming. At the end of each chapter there is a section, like this one, with\nmy suggestions for debugging. I hope they help!\n1.8 Glossary\nproblem solving:The process of formulating a problem, finding a solution, and express-\ning it.\nhigh-level language:A programming language like Python that is designed to be easy for\nhumans to read and write.\nlow-level language:A programming language that is designed to be easy for a computer\nto run; also called “machine language” or “assembly la",
+        "metadata": {
+          "page": 28,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 1,
+          "page_id": "thinkpython2-p028",
+          "char_end": 2300,
+          "char_start": 1800,
+          "document_id": "thinkpython2",
+          "chunk_method": "fixed-v1-500-50",
+          "printed_page": 6,
+          "chapter_title": "The way of the program",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7135656476020813,
+        "automatic_evidence_match": false
+      }
+    ],
+    "human_grounding_0_2": 2,
+    "human_reason": "The passage includes the condition that preconditions hold but postconditions fail.",
+    "strategy": "A",
+    "applied_filter": null,
+    "search_seconds": 0.05819579999661073,
+    "metadata_review": [
+      {
+        "chunk_id": "fdfffdf91e91e088079a93d70733bc448c7c6f93a34912fd8907eea850967c87",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "5304a5e971b0dcb7b9e181792cc9df56dad7bb2b91848f2a7882669fb0f1e74c",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "5e1bd2384199506b78024b00be1820d45a25a6ef1a03b5f4d023c67a2d13a9ba",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      }
+    ],
+    "review_status": "AUTHOR_REVIEWED",
+    "reviewed_by": "Lưu Văn Việt Đức"
+  },
+  {
+    "id": "Q16",
+    "split": "test",
+    "question": "Trong chương 4, việc gói một đoạn mã vào một hàm được gọi là gì?",
+    "expected_answer": "Encapsulation (đóng gói).",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 54,
+    "evidence_quote": "Wrapping a piece of code up in a function is calledencapsulation.",
+    "alternative_gold": [],
+    "requested_filter": {
+      "chapter": 4
+    },
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "chunk_id": "1d87dd89e84f93eb233e788d445f10de4cdced50d501662627f4c1da2b9e389f",
+        "text": "32 Chapter 4. Case study: interface design\n4.4 Encapsulation\nThe first exercise asks you to put your square-drawing code into a function definition and\nthen call the function, passing the turtle as a parameter. Here is a solution:\ndef square(t):\nfor i in range(4):\nt.fd(100)\nt.lt(90)\nsquare(bob)\nThe innermost statements,fdandltare indented twice to show that they are inside the\nforloop, which is inside the function definition. The next line,square(bob), is flush with\nthe left margin, which indicates the end of both theforloop and the function definition.\nInside the function,trefers to the same turtlebob, sot.lt(90)has the same effect as\nbob.lt(90). In that case, why not call the parameterbob? The idea is thattcan be any\nturtle, not justbob, so you could create a second turtle and pass it as an argument tosquare:\nalice = turtle.Turtle()\nsquare(alice)\nWrapping a piece of code up in a function is calledencapsulation.",
+        "metadata": {
+          "page": 54,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p054",
+          "char_end": 926,
+          "char_start": 0,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 32,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7334185560442739,
+        "automatic_evidence_match": true
+      },
+      {
+        "chunk_id": "5b5d826d806b3bd746e4e22ba98fa0989142fb429e37421f9dd3c953aaa4252c",
+        "text": "At the end of each chapter there is a section, like this one, with\nmy suggestions for debugging. I hope they help!\n1.8 Glossary\nproblem solving:The process of formulating a problem, finding a solution, and express-\ning it.\nhigh-level language:A programming language like Python that is designed to be easy for\nhumans to read and write.\nlow-level language:A programming language that is designed to be easy for a computer\nto run; also called “machine language” or “assembly language”.\nportability:A property of a program that can run on more than one kind of computer.\ninterpreter:A program that reads another program and executes it\nprompt:Characters displayed by the interpreter to indicate that it is ready to take input\nfrom the user.\nprogram:A set of instructions that specifies a computation.",
+        "metadata": {
+          "page": 28,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 1,
+          "page_id": "thinkpython2-p028",
+          "char_end": 2622,
+          "char_start": 1825,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 6,
+          "chapter_title": "The way of the program",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7281513538180168,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "e0328866b5c2253726433c5edcd889f166532c403366b4552251b5ddfe0071b4",
+        "text": "4.11 Glossary\nmethod:A function that is associated with an object and called using dot notation.\nloop:A part of a program that can run repeatedly.\nencapsulation:The process of transforming a sequence of statements into a function defi-\nnition.\ngeneralization:The process of replacing something unnecessarily specific (like a number)\nwith something appropriately general (like a variable or parameter).\nkeyword argument:An argument that includes the name of the parameter as a “key-\nword”.\ninterface:A description of how to use a function, including the name and descriptions of\nthe arguments and return value.\nrefactoring:The process of modifying a working program to improve function interfaces\nand other qualities of the code.\ndevelopment plan:A process for writing programs.",
+        "metadata": {
+          "page": 58,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p058",
+          "char_end": 2460,
+          "char_start": 1683,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 36,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7248500913560282,
+        "automatic_evidence_match": false
+      }
+    ],
+    "human_grounding_0_2": 2,
+    "human_reason": "The top three contain the function-wrapping example and the term encapsulation.",
+    "strategy": "B",
+    "applied_filter": null,
+    "search_seconds": 0.032104700003401376,
+    "metadata_review": [
+      {
+        "chunk_id": "1d87dd89e84f93eb233e788d445f10de4cdced50d501662627f4c1da2b9e389f",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "5b5d826d806b3bd746e4e22ba98fa0989142fb429e37421f9dd3c953aaa4252c",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "e0328866b5c2253726433c5edcd889f166532c403366b4552251b5ddfe0071b4",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      }
+    ],
+    "review_status": "AUTHOR_REVIEWED",
+    "reviewed_by": "Lưu Văn Việt Đức"
+  },
+  {
+    "id": "Q17",
+    "split": "test",
+    "question": "Khi một hàm có nhiều đối số số học và dễ quên thứ tự, sách đề xuất cách gọi nào?",
+    "expected_answer": "Ghi tên tham số trong lời gọi, tức keyword arguments, ví dụ polygon(bob, n=7, length=70).",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 55,
+    "evidence_quote": "When a function has more than a few numeric arguments, it is easy to forget what they are, or what order they should be in. In that case it is often a good idea to include the names of the parameters in the argument list: polygon(bob, n=7, length=70)",
+    "alternative_gold": [],
+    "requested_filter": null,
+    "hit_at_1": false,
+    "evidence_hit_at_3": false,
+    "hits": [
+      {
+        "chunk_id": "0df0d713b9fbbeb6e8dc560bc7418fabb00b183a15af51a34aba8ef35d738873",
+        "text": "2.10 Exercises\nExercise 2.1.Repeating my advice from the previous chapter, whenever you learn a new feature,\nyou should try it out in interactive mode and make errors on purpose to see what goes wrong.\n•We’ve seen thatn = 42is legal. What about42 = n?",
+        "metadata": {
+          "page": 36,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 2,
+          "page_id": "thinkpython2-p036",
+          "char_end": 1922,
+          "char_start": 1671,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 14,
+          "chapter_title": "Variables, expressions and statements",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7045135430371399,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "74d87d64df6b65c031739c0dbcc2f1777b2e7e566128af7177b94a71a1a6fcce",
+        "text": "For example, when you call\nmath.sinyou pass a number as an argument. Some functions take more than one ar-\ngument:math.powtakes two, the base and the exponent.\nInside the function, the arguments are assigned to variables calledparameters. Here is a\ndefinition for a function that takes an argument:\ndef print_twice(bruce):\nprint(bruce)\nprint(bruce)\nThis function assigns the argument to a parameter namedbruce. When the function is\ncalled, it prints the value of the parameter (whatever it is) twice.\nThis function works with any value that can be printed.",
+        "metadata": {
+          "page": 43,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 3,
+          "page_id": "thinkpython2-p043",
+          "char_end": 2486,
+          "char_start": 1930,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 21,
+          "chapter_title": "Functions",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7016106781463615,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "868c388627d910c4eec6395b7962dd331c140b183cf94d7d77e05aa40776e18f",
+        "text": "22 Chapter 3. Functions\n>>> print_twice('Spam')\nSpam\nSpam\n>>> print_twice(42)\n42\n42\n>>> print_twice(math.pi)\n3.14159265359\n3.14159265359\nThe same rules of composition that apply to built-in functions also apply to programmer-\ndefined functions, so we can use any kind of expression as an argument forprint_twice:\n>>> print_twice('Spam'*4)\nSpam Spam Spam Spam\nSpam Spam Spam Spam\n>>> print_twice(math.cos(math.pi))\n-1.0\n-1.0\nThe argument is evaluated before the function is called, so in the examples the expressions\n'Spam'*4andmath.cos(math.pi)are only evaluated once.\nYou can also use a variable as an argument:\n>>> michael ='Eric, the half a bee.'\n>>> print_twice(michael)\nEric, the half a bee.\nEric, the half a bee.\nThe name of the variable we pass as an argument (michael) has nothing to do with the\nname of the parameter (bruce). It doesn’t matter what the value was called back home (in\nthe caller); here inprint_twice, we call everybodybruce.",
+        "metadata": {
+          "page": 44,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 3,
+          "page_id": "thinkpython2-p044",
+          "char_end": 949,
+          "char_start": 0,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 22,
+          "chapter_title": "Functions",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7008503644898286,
+        "automatic_evidence_match": false
+      }
+    ],
+    "human_grounding_0_2": 0,
+    "human_reason": "The retrieved passages do not support the keyword-argument solution.",
+    "strategy": "B",
+    "applied_filter": null,
+    "search_seconds": 0.04204089999257121,
+    "metadata_review": [
+      {
+        "chunk_id": "0df0d713b9fbbeb6e8dc560bc7418fabb00b183a15af51a34aba8ef35d738873",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "74d87d64df6b65c031739c0dbcc2f1777b2e7e566128af7177b94a71a1a6fcce",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "868c388627d910c4eec6395b7962dd331c140b183cf94d7d77e05aa40776e18f",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      }
+    ],
+    "review_status": "AUTHOR_REVIEWED",
+    "reviewed_by": "Lưu Văn Việt Đức"
+  },
+  {
+    "id": "Q18",
+    "split": "test",
+    "question": "Một giao diện hàm sạch giúp người gọi sử dụng hàm như thế nào?",
+    "expected_answer": "Cho phép người gọi làm điều họ muốn mà không phải xử lý các chi tiết không cần thiết.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 55,
+    "evidence_quote": "An interface is “clean” if it allows the caller to do what they want without dealing with unnecessary details.",
+    "alternative_gold": [],
+    "requested_filter": null,
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "chunk_id": "490dce82126cac25fd084f9cdd1f026cf27a7027f4d42f901fa2712fc33c4b5e",
+        "text": "Theinterfaceof a function is a summary of how it is used: what are the parameters? What\ndoes the function do? And what is the return value? An interface is “clean” if it allows the\ncaller to do what they want without dealing with unnecessary details.\nIn this example,rbelongs in the interface because it specifies the circle to be drawn.nis\nless appropriate because it pertains to the details ofhowthe circle should be rendered.\nRather than clutter up the interface, it is better to choose an appropriate value ofndepend-\ning oncircumference:",
+        "metadata": {
+          "page": 55,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p055",
+          "char_end": 2464,
+          "char_start": 1922,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 33,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7361908397788323,
+        "automatic_evidence_match": true
+      },
+      {
+        "chunk_id": "74ff1afec1b959e426de188bfb2fc9d95b41a8af1bf8021f45926038a2555e1b",
+        "text": "36 Chapter 4. Case study: interface design\nIt is terse, but it contains the essential information someone would need to use this func-\ntion. It explains concisely what the function does (without getting into the details of how\nit does it). It explains what effect each parameter has on the behavior of the function and\nwhat type each parameter should be (if it is not obvious).\nWriting this kind of documentation is an important part of interface design. A well-\ndesigned interface should be simple to explain; if you have a hard time explaining one\nof your functions, maybe the interface could be improved.\n4.10 Debugging\nAn interface is like a contract between a function and a caller. The caller agrees to provide\ncertain parameters and the function agrees to do certain work.\nFor example,polylinerequires four arguments:thas to be a Turtle;nhas to be an integer;\nlengthshould be a positive number; andanglehas to be a number, which is understood\nto be in degrees.",
+        "metadata": {
+          "page": 58,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p058",
+          "char_end": 967,
+          "char_start": 0,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 36,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7173900008201599,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "57b2eed5f29d4b508449b35a6d76d28e6a89d92583a4014b0b413065382d7169",
+        "text": "Ac-\ncording to Larry Greenfield, “One of Linus’s earlier projects was a program that would\nswitch between printing AAAA and BBBB. This later evolved to Linux.” (The Linux Users’\nGuideBeta Version 1).\n3.13 Glossary\nfunction:A named sequence of statements that performs some useful operation. Func-\ntions may or may not take arguments and may or may not produce a result.\nfunction definition:A statement that creates a new function, specifying its name, param-\neters, and the statements it contains.\nfunction object:A value created by a function definition. The name of the function is a\nvariable that refers to a function object.\nheader:The first line of a function definition.",
+        "metadata": {
+          "page": 47,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 3,
+          "page_id": "thinkpython2-p047",
+          "char_end": 2526,
+          "char_start": 1850,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 25,
+          "chapter_title": "Functions",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.6785185720302425,
+        "automatic_evidence_match": false
+      }
+    ],
+    "human_grounding_0_2": 2,
+    "human_reason": "The clean-interface definition and avoidance of unnecessary details are present.",
+    "strategy": "B",
+    "applied_filter": null,
+    "search_seconds": 0.026903200006927364,
+    "metadata_review": [
+      {
+        "chunk_id": "490dce82126cac25fd084f9cdd1f026cf27a7027f4d42f901fa2712fc33c4b5e",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "74ff1afec1b959e426de188bfb2fc9d95b41a8af1bf8021f45926038a2555e1b",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "57b2eed5f29d4b508449b35a6d76d28e6a89d92583a4014b0b413065382d7169",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      }
+    ],
+    "review_status": "AUTHOR_REVIEWED",
+    "reviewed_by": "Lưu Văn Việt Đức"
+  },
+  {
+    "id": "Q19",
+    "split": "test",
+    "question": "Docstring nằm ở đâu và dùng để giải thích điều gì?",
+    "expected_answer": "Là chuỗi ở đầu hàm, giải thích giao diện của hàm.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 57,
+    "evidence_quote": "Adocstringis a string at the beginning of a function that explains the interface",
+    "alternative_gold": [],
+    "requested_filter": null,
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "chunk_id": "2169cc9d83cbb1783ba766446301e890fae6b5db37962929bf0124c5155acb8c",
+        "text": "Generalize the function by adding appropriate parameters.\n4. Repeat steps 1–3 until you have a set of working functions. Copy and paste working\ncode to avoid retyping (and re-debugging).\n5. Look for opportunities to improve the program by refactoring. For example, if you\nhave similar code in several places, consider factoring it into an appropriately general\nfunction.\nThis process has some drawbacks—we will see alternatives later—but it can be useful if\nyou don’t know ahead of time how to divide the program into functions. This approach\nlets you design as you go along.\n4.9 docstring\nAdocstringis a string at the beginning of a function that explains the interface (“doc” is\nshort for “documentation”).",
+        "metadata": {
+          "page": 57,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p057",
+          "char_end": 1661,
+          "char_start": 953,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 35,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.714760384403479,
+        "automatic_evidence_match": true
+      },
+      {
+        "chunk_id": "4c0cc5fc4d672e808b763b98215b3e15fb748ae2160fc6d6e1482ce49b554e34",
+        "text": "Here is an example:\ndef polyline(t, n, length, angle):\n\"\"\"Draws n line segments with the given length and\nangle (in degrees) between them. t is a turtle.\n\"\"\"\nfor i in range(n):\nt.fd(length)\nt.lt(angle)\nBy convention, all docstrings are triple-quoted strings, also known as multiline strings\nbecause the triple quotes allow the string to span more than one line.",
+        "metadata": {
+          "page": 57,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p057",
+          "char_end": 2023,
+          "char_start": 1662,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 35,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7018625945407928,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "43f24c8dfcf497d1ec69c30c9057ec697dd28b32043f987e9912b06ce1479005",
+        "text": "2.8. Debugging 13\nFor this reason, it is a good idea to add notes to your programs to explain in natural lan-\nguage what the program is doing. These notes are calledcomments, and they start with\nthe#symbol:\n# compute the percentage of the hour that has elapsed\npercentage = (minute * 100) / 60\nIn this case, the comment appears on a line by itself. You can also put comments at the end\nof a line:\npercentage = (minute * 100) / 60 # percentage of an hour\nEverything from the#to the end of the line is ignored—it has no effect on the execution of\nthe program.\nComments are most useful when they document non-obvious features of the code. It is\nreasonable to assume that the reader can figure outwhatthe code does; it is more useful to\nexplainwhy.\nThis comment is redundant with the code and useless:\nv = 5 # assign 5 to v\nThis comment contains useful information that is not in the code:\nv = 5 # velocity in meters/second.",
+        "metadata": {
+          "page": 35,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 2,
+          "page_id": "thinkpython2-p035",
+          "char_end": 920,
+          "char_start": 0,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 13,
+          "chapter_title": "Variables, expressions and statements",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.6889149526731788,
+        "automatic_evidence_match": false
+      }
+    ],
+    "human_grounding_0_2": 2,
+    "human_reason": "The location of a docstring and its interface-documentation purpose are present.",
+    "strategy": "B",
+    "applied_filter": null,
+    "search_seconds": 0.025739400007296354,
+    "metadata_review": [
+      {
+        "chunk_id": "2169cc9d83cbb1783ba766446301e890fae6b5db37962929bf0124c5155acb8c",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "4c0cc5fc4d672e808b763b98215b3e15fb748ae2160fc6d6e1482ce49b554e34",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "43f24c8dfcf497d1ec69c30c9057ec697dd28b32043f987e9912b06ce1479005",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      }
+    ],
+    "review_status": "AUTHOR_REVIEWED",
+    "reviewed_by": "Lưu Văn Việt Đức"
+  },
+  {
+    "id": "Q20",
+    "split": "test",
+    "question": "Theo phần Debugging của chương 4, nếu preconditions được đáp ứng nhưng postconditions không đạt thì lỗi nằm ở đâu?",
+    "expected_answer": "Lỗi nằm trong hàm.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 58,
+    "evidence_quote": "If the preconditions are satisfied and the postconditions are not, the bug is in the function.",
+    "alternative_gold": [],
+    "requested_filter": {
+      "chapter": 4
+    },
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "chunk_id": "44a1b087f82368f2fbdca8f89743962928316ff86f9b948e962deeaf007434fd",
+        "text": "These requirements are calledpreconditionsbecause they are supposed to be true before\nthe function starts executing. Conversely, conditions at the end of the function arepost-\nconditions. Postconditions include the intended effect of the function (like drawing line\nsegments) and any side effects (like moving the Turtle or making other changes).\nPreconditions are the responsibility of the caller. If the caller violates a (properly docu-\nmented!) precondition and the function doesn’t work correctly, the bug is in the caller, not\nthe function.\nIf the preconditions are satisfied and the postconditions are not, the bug is in the function.\nIf your pre- and postconditions are clear, they can help with debugging.",
+        "metadata": {
+          "page": 58,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p058",
+          "char_end": 1682,
+          "char_start": 968,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 36,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7654492398828735,
+        "automatic_evidence_match": true
+      },
+      {
+        "chunk_id": "4515ce94273ce1c5fd11f6d42163aec3635c5efea80e1683e88f93ec01e4df33",
+        "text": "Once you have an idea about what is going\nwrong, you modify your program and try again. If your hypothesis was correct, you can\npredict the result of the modification, and you take a step closer to a working program. If\nyour hypothesis was wrong, you have to come up with a new one. As Sherlock Holmes\npointed out, “When you have eliminated the impossible, whatever remains, however im-\nprobable, must be the truth.” (A. Conan Doyle,The Sign of Four)\nFor some people, programming and debugging are the same thing. That is, programming\nis the process of gradually debugging a program until it does what you want. The idea is\nthat you should start with a working program and make small modifications, debugging\nthem as you go.\nFor example, Linux is an operating system that contains millions of lines of code, but it\nstarted out as a simple program Linus Torvalds used to explore the Intel 80386 chip.",
+        "metadata": {
+          "page": 47,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 3,
+          "page_id": "thinkpython2-p047",
+          "char_end": 1849,
+          "char_start": 950,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 25,
+          "chapter_title": "Functions",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7176777124404907,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "ff460f24105d7943012290b838bd3b21f43f9c494fdb7ff5d3e1bfbec80f2ddc",
+        "text": "6 Chapter 1. The way of the program\nFormal languages are more dense than natural languages, so it takes longer to read them.\nAlso, the structure is important, so it is not always best to read from top to bottom, left to\nright. Instead, learn to parse the program in your head, identifying the tokens and inter-\npreting the structure. Finally, the details matter. Small errors in spelling and punctuation,\nwhich you can get away with in natural languages, can make a big difference in a formal\nlanguage.\n1.7 Debugging\nProgrammers make mistakes. For whimsical reasons, programming errors are calledbugs\nand the process of tracking them down is calleddebugging.\nProgramming, and especially debugging, sometimes brings out strong emotions. If you\nare struggling with a difficult bug, you might feel angry, despondent, or embarrassed.\nThere is evidence that people naturally respond to computers as if they were people.",
+        "metadata": {
+          "page": 28,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 1,
+          "page_id": "thinkpython2-p028",
+          "char_end": 914,
+          "char_start": 0,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 6,
+          "chapter_title": "The way of the program",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7144337466696664,
+        "automatic_evidence_match": false
+      }
+    ],
+    "human_grounding_0_2": 2,
+    "human_reason": "The passage includes the condition that preconditions hold but postconditions fail.",
+    "strategy": "B",
+    "applied_filter": null,
+    "search_seconds": 0.027053099998738617,
+    "metadata_review": [
+      {
+        "chunk_id": "44a1b087f82368f2fbdca8f89743962928316ff86f9b948e962deeaf007434fd",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "4515ce94273ce1c5fd11f6d42163aec3635c5efea80e1683e88f93ec01e4df33",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "ff460f24105d7943012290b838bd3b21f43f9c494fdb7ff5d3e1bfbec80f2ddc",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      }
+    ],
+    "review_status": "AUTHOR_REVIEWED",
+    "reviewed_by": "Lưu Văn Việt Đức"
+  },
+  {
+    "id": "Q16",
+    "split": "test",
+    "question": "Trong chương 4, việc gói một đoạn mã vào một hàm được gọi là gì?",
+    "expected_answer": "Encapsulation (đóng gói).",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 54,
+    "evidence_quote": "Wrapping a piece of code up in a function is calledencapsulation.",
+    "alternative_gold": [],
+    "requested_filter": {
+      "chapter": 4
+    },
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "chunk_id": "1d87dd89e84f93eb233e788d445f10de4cdced50d501662627f4c1da2b9e389f",
+        "text": "32 Chapter 4. Case study: interface design\n4.4 Encapsulation\nThe first exercise asks you to put your square-drawing code into a function definition and\nthen call the function, passing the turtle as a parameter. Here is a solution:\ndef square(t):\nfor i in range(4):\nt.fd(100)\nt.lt(90)\nsquare(bob)\nThe innermost statements,fdandltare indented twice to show that they are inside the\nforloop, which is inside the function definition. The next line,square(bob), is flush with\nthe left margin, which indicates the end of both theforloop and the function definition.\nInside the function,trefers to the same turtlebob, sot.lt(90)has the same effect as\nbob.lt(90). In that case, why not call the parameterbob? The idea is thattcan be any\nturtle, not justbob, so you could create a second turtle and pass it as an argument tosquare:\nalice = turtle.Turtle()\nsquare(alice)\nWrapping a piece of code up in a function is calledencapsulation.",
+        "metadata": {
+          "page": 54,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p054",
+          "char_end": 926,
+          "char_start": 0,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 32,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7334185560442739,
+        "automatic_evidence_match": true
+      },
+      {
+        "chunk_id": "e0328866b5c2253726433c5edcd889f166532c403366b4552251b5ddfe0071b4",
+        "text": "4.11 Glossary\nmethod:A function that is associated with an object and called using dot notation.\nloop:A part of a program that can run repeatedly.\nencapsulation:The process of transforming a sequence of statements into a function defi-\nnition.\ngeneralization:The process of replacing something unnecessarily specific (like a number)\nwith something appropriately general (like a variable or parameter).\nkeyword argument:An argument that includes the name of the parameter as a “key-\nword”.\ninterface:A description of how to use a function, including the name and descriptions of\nthe arguments and return value.\nrefactoring:The process of modifying a working program to improve function interfaces\nand other qualities of the code.\ndevelopment plan:A process for writing programs.",
+        "metadata": {
+          "page": 58,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p058",
+          "char_end": 2460,
+          "char_start": 1683,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 36,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7248500913560282,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "2169cc9d83cbb1783ba766446301e890fae6b5db37962929bf0124c5155acb8c",
+        "text": "Generalize the function by adding appropriate parameters.\n4. Repeat steps 1–3 until you have a set of working functions. Copy and paste working\ncode to avoid retyping (and re-debugging).\n5. Look for opportunities to improve the program by refactoring. For example, if you\nhave similar code in several places, consider factoring it into an appropriately general\nfunction.\nThis process has some drawbacks—we will see alternatives later—but it can be useful if\nyou don’t know ahead of time how to divide the program into functions. This approach\nlets you design as you go along.\n4.9 docstring\nAdocstringis a string at the beginning of a function that explains the interface (“doc” is\nshort for “documentation”).",
+        "metadata": {
+          "page": 57,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p057",
+          "char_end": 1661,
+          "char_start": 953,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 35,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7202459144445722,
+        "automatic_evidence_match": false
+      }
+    ],
+    "human_grounding_0_2": 2,
+    "human_reason": "The top three contain the function-wrapping example and the term encapsulation.",
+    "strategy": "C",
+    "applied_filter": {
+      "chapter": 4
+    },
+    "search_seconds": 0.04179469999508001,
+    "metadata_review": [
+      {
+        "chunk_id": "1d87dd89e84f93eb233e788d445f10de4cdced50d501662627f4c1da2b9e389f",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "e0328866b5c2253726433c5edcd889f166532c403366b4552251b5ddfe0071b4",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "2169cc9d83cbb1783ba766446301e890fae6b5db37962929bf0124c5155acb8c",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      }
+    ],
+    "review_status": "AUTHOR_REVIEWED",
+    "reviewed_by": "Lưu Văn Việt Đức"
+  },
+  {
+    "id": "Q17",
+    "split": "test",
+    "question": "Khi một hàm có nhiều đối số số học và dễ quên thứ tự, sách đề xuất cách gọi nào?",
+    "expected_answer": "Ghi tên tham số trong lời gọi, tức keyword arguments, ví dụ polygon(bob, n=7, length=70).",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 55,
+    "evidence_quote": "When a function has more than a few numeric arguments, it is easy to forget what they are, or what order they should be in. In that case it is often a good idea to include the names of the parameters in the argument list: polygon(bob, n=7, length=70)",
+    "alternative_gold": [],
+    "requested_filter": null,
+    "hit_at_1": false,
+    "evidence_hit_at_3": false,
+    "hits": [
+      {
+        "chunk_id": "0df0d713b9fbbeb6e8dc560bc7418fabb00b183a15af51a34aba8ef35d738873",
+        "text": "2.10 Exercises\nExercise 2.1.Repeating my advice from the previous chapter, whenever you learn a new feature,\nyou should try it out in interactive mode and make errors on purpose to see what goes wrong.\n•We’ve seen thatn = 42is legal. What about42 = n?",
+        "metadata": {
+          "page": 36,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 2,
+          "page_id": "thinkpython2-p036",
+          "char_end": 1922,
+          "char_start": 1671,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 14,
+          "chapter_title": "Variables, expressions and statements",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7045135430371399,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "74d87d64df6b65c031739c0dbcc2f1777b2e7e566128af7177b94a71a1a6fcce",
+        "text": "For example, when you call\nmath.sinyou pass a number as an argument. Some functions take more than one ar-\ngument:math.powtakes two, the base and the exponent.\nInside the function, the arguments are assigned to variables calledparameters. Here is a\ndefinition for a function that takes an argument:\ndef print_twice(bruce):\nprint(bruce)\nprint(bruce)\nThis function assigns the argument to a parameter namedbruce. When the function is\ncalled, it prints the value of the parameter (whatever it is) twice.\nThis function works with any value that can be printed.",
+        "metadata": {
+          "page": 43,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 3,
+          "page_id": "thinkpython2-p043",
+          "char_end": 2486,
+          "char_start": 1930,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 21,
+          "chapter_title": "Functions",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7016106781463615,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "868c388627d910c4eec6395b7962dd331c140b183cf94d7d77e05aa40776e18f",
+        "text": "22 Chapter 3. Functions\n>>> print_twice('Spam')\nSpam\nSpam\n>>> print_twice(42)\n42\n42\n>>> print_twice(math.pi)\n3.14159265359\n3.14159265359\nThe same rules of composition that apply to built-in functions also apply to programmer-\ndefined functions, so we can use any kind of expression as an argument forprint_twice:\n>>> print_twice('Spam'*4)\nSpam Spam Spam Spam\nSpam Spam Spam Spam\n>>> print_twice(math.cos(math.pi))\n-1.0\n-1.0\nThe argument is evaluated before the function is called, so in the examples the expressions\n'Spam'*4andmath.cos(math.pi)are only evaluated once.\nYou can also use a variable as an argument:\n>>> michael ='Eric, the half a bee.'\n>>> print_twice(michael)\nEric, the half a bee.\nEric, the half a bee.\nThe name of the variable we pass as an argument (michael) has nothing to do with the\nname of the parameter (bruce). It doesn’t matter what the value was called back home (in\nthe caller); here inprint_twice, we call everybodybruce.",
+        "metadata": {
+          "page": 44,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 3,
+          "page_id": "thinkpython2-p044",
+          "char_end": 949,
+          "char_start": 0,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 22,
+          "chapter_title": "Functions",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7008503644898286,
+        "automatic_evidence_match": false
+      }
+    ],
+    "human_grounding_0_2": 0,
+    "human_reason": "The retrieved passages do not support the keyword-argument solution.",
+    "strategy": "C",
+    "applied_filter": null,
+    "search_seconds": 0.029968700007884763,
+    "metadata_review": [
+      {
+        "chunk_id": "0df0d713b9fbbeb6e8dc560bc7418fabb00b183a15af51a34aba8ef35d738873",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "74d87d64df6b65c031739c0dbcc2f1777b2e7e566128af7177b94a71a1a6fcce",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "868c388627d910c4eec6395b7962dd331c140b183cf94d7d77e05aa40776e18f",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      }
+    ],
+    "review_status": "AUTHOR_REVIEWED",
+    "reviewed_by": "Lưu Văn Việt Đức"
+  },
+  {
+    "id": "Q18",
+    "split": "test",
+    "question": "Một giao diện hàm sạch giúp người gọi sử dụng hàm như thế nào?",
+    "expected_answer": "Cho phép người gọi làm điều họ muốn mà không phải xử lý các chi tiết không cần thiết.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 55,
+    "evidence_quote": "An interface is “clean” if it allows the caller to do what they want without dealing with unnecessary details.",
+    "alternative_gold": [],
+    "requested_filter": null,
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "chunk_id": "490dce82126cac25fd084f9cdd1f026cf27a7027f4d42f901fa2712fc33c4b5e",
+        "text": "Theinterfaceof a function is a summary of how it is used: what are the parameters? What\ndoes the function do? And what is the return value? An interface is “clean” if it allows the\ncaller to do what they want without dealing with unnecessary details.\nIn this example,rbelongs in the interface because it specifies the circle to be drawn.nis\nless appropriate because it pertains to the details ofhowthe circle should be rendered.\nRather than clutter up the interface, it is better to choose an appropriate value ofndepend-\ning oncircumference:",
+        "metadata": {
+          "page": 55,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p055",
+          "char_end": 2464,
+          "char_start": 1922,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 33,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7361908397788323,
+        "automatic_evidence_match": true
+      },
+      {
+        "chunk_id": "74ff1afec1b959e426de188bfb2fc9d95b41a8af1bf8021f45926038a2555e1b",
+        "text": "36 Chapter 4. Case study: interface design\nIt is terse, but it contains the essential information someone would need to use this func-\ntion. It explains concisely what the function does (without getting into the details of how\nit does it). It explains what effect each parameter has on the behavior of the function and\nwhat type each parameter should be (if it is not obvious).\nWriting this kind of documentation is an important part of interface design. A well-\ndesigned interface should be simple to explain; if you have a hard time explaining one\nof your functions, maybe the interface could be improved.\n4.10 Debugging\nAn interface is like a contract between a function and a caller. The caller agrees to provide\ncertain parameters and the function agrees to do certain work.\nFor example,polylinerequires four arguments:thas to be a Turtle;nhas to be an integer;\nlengthshould be a positive number; andanglehas to be a number, which is understood\nto be in degrees.",
+        "metadata": {
+          "page": 58,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p058",
+          "char_end": 967,
+          "char_start": 0,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 36,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7173900008201599,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "57b2eed5f29d4b508449b35a6d76d28e6a89d92583a4014b0b413065382d7169",
+        "text": "Ac-\ncording to Larry Greenfield, “One of Linus’s earlier projects was a program that would\nswitch between printing AAAA and BBBB. This later evolved to Linux.” (The Linux Users’\nGuideBeta Version 1).\n3.13 Glossary\nfunction:A named sequence of statements that performs some useful operation. Func-\ntions may or may not take arguments and may or may not produce a result.\nfunction definition:A statement that creates a new function, specifying its name, param-\neters, and the statements it contains.\nfunction object:A value created by a function definition. The name of the function is a\nvariable that refers to a function object.\nheader:The first line of a function definition.",
+        "metadata": {
+          "page": 47,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 3,
+          "page_id": "thinkpython2-p047",
+          "char_end": 2526,
+          "char_start": 1850,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 25,
+          "chapter_title": "Functions",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.6785185720302425,
+        "automatic_evidence_match": false
+      }
+    ],
+    "human_grounding_0_2": 2,
+    "human_reason": "The clean-interface definition and avoidance of unnecessary details are present.",
+    "strategy": "C",
+    "applied_filter": null,
+    "search_seconds": 0.028582400002051145,
+    "metadata_review": [
+      {
+        "chunk_id": "490dce82126cac25fd084f9cdd1f026cf27a7027f4d42f901fa2712fc33c4b5e",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "74ff1afec1b959e426de188bfb2fc9d95b41a8af1bf8021f45926038a2555e1b",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "57b2eed5f29d4b508449b35a6d76d28e6a89d92583a4014b0b413065382d7169",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      }
+    ],
+    "review_status": "AUTHOR_REVIEWED",
+    "reviewed_by": "Lưu Văn Việt Đức"
+  },
+  {
+    "id": "Q19",
+    "split": "test",
+    "question": "Docstring nằm ở đâu và dùng để giải thích điều gì?",
+    "expected_answer": "Là chuỗi ở đầu hàm, giải thích giao diện của hàm.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 57,
+    "evidence_quote": "Adocstringis a string at the beginning of a function that explains the interface",
+    "alternative_gold": [],
+    "requested_filter": null,
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "chunk_id": "2169cc9d83cbb1783ba766446301e890fae6b5db37962929bf0124c5155acb8c",
+        "text": "Generalize the function by adding appropriate parameters.\n4. Repeat steps 1–3 until you have a set of working functions. Copy and paste working\ncode to avoid retyping (and re-debugging).\n5. Look for opportunities to improve the program by refactoring. For example, if you\nhave similar code in several places, consider factoring it into an appropriately general\nfunction.\nThis process has some drawbacks—we will see alternatives later—but it can be useful if\nyou don’t know ahead of time how to divide the program into functions. This approach\nlets you design as you go along.\n4.9 docstring\nAdocstringis a string at the beginning of a function that explains the interface (“doc” is\nshort for “documentation”).",
+        "metadata": {
+          "page": 57,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p057",
+          "char_end": 1661,
+          "char_start": 953,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 35,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.714760384403479,
+        "automatic_evidence_match": true
+      },
+      {
+        "chunk_id": "4c0cc5fc4d672e808b763b98215b3e15fb748ae2160fc6d6e1482ce49b554e34",
+        "text": "Here is an example:\ndef polyline(t, n, length, angle):\n\"\"\"Draws n line segments with the given length and\nangle (in degrees) between them. t is a turtle.\n\"\"\"\nfor i in range(n):\nt.fd(length)\nt.lt(angle)\nBy convention, all docstrings are triple-quoted strings, also known as multiline strings\nbecause the triple quotes allow the string to span more than one line.",
+        "metadata": {
+          "page": 57,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p057",
+          "char_end": 2023,
+          "char_start": 1662,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 35,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7018625945407928,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "43f24c8dfcf497d1ec69c30c9057ec697dd28b32043f987e9912b06ce1479005",
+        "text": "2.8. Debugging 13\nFor this reason, it is a good idea to add notes to your programs to explain in natural lan-\nguage what the program is doing. These notes are calledcomments, and they start with\nthe#symbol:\n# compute the percentage of the hour that has elapsed\npercentage = (minute * 100) / 60\nIn this case, the comment appears on a line by itself. You can also put comments at the end\nof a line:\npercentage = (minute * 100) / 60 # percentage of an hour\nEverything from the#to the end of the line is ignored—it has no effect on the execution of\nthe program.\nComments are most useful when they document non-obvious features of the code. It is\nreasonable to assume that the reader can figure outwhatthe code does; it is more useful to\nexplainwhy.\nThis comment is redundant with the code and useless:\nv = 5 # assign 5 to v\nThis comment contains useful information that is not in the code:\nv = 5 # velocity in meters/second.",
+        "metadata": {
+          "page": 35,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 2,
+          "page_id": "thinkpython2-p035",
+          "char_end": 920,
+          "char_start": 0,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 13,
+          "chapter_title": "Variables, expressions and statements",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.6889149526731788,
+        "automatic_evidence_match": false
+      }
+    ],
+    "human_grounding_0_2": 2,
+    "human_reason": "The location of a docstring and its interface-documentation purpose are present.",
+    "strategy": "C",
+    "applied_filter": null,
+    "search_seconds": 0.01960480000707321,
+    "metadata_review": [
+      {
+        "chunk_id": "2169cc9d83cbb1783ba766446301e890fae6b5db37962929bf0124c5155acb8c",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "4c0cc5fc4d672e808b763b98215b3e15fb748ae2160fc6d6e1482ce49b554e34",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "43f24c8dfcf497d1ec69c30c9057ec697dd28b32043f987e9912b06ce1479005",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      }
+    ],
+    "review_status": "AUTHOR_REVIEWED",
+    "reviewed_by": "Lưu Văn Việt Đức"
+  },
+  {
+    "id": "Q20",
+    "split": "test",
+    "question": "Theo phần Debugging của chương 4, nếu preconditions được đáp ứng nhưng postconditions không đạt thì lỗi nằm ở đâu?",
+    "expected_answer": "Lỗi nằm trong hàm.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 58,
+    "evidence_quote": "If the preconditions are satisfied and the postconditions are not, the bug is in the function.",
+    "alternative_gold": [],
+    "requested_filter": {
+      "chapter": 4
+    },
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "chunk_id": "44a1b087f82368f2fbdca8f89743962928316ff86f9b948e962deeaf007434fd",
+        "text": "These requirements are calledpreconditionsbecause they are supposed to be true before\nthe function starts executing. Conversely, conditions at the end of the function arepost-\nconditions. Postconditions include the intended effect of the function (like drawing line\nsegments) and any side effects (like moving the Turtle or making other changes).\nPreconditions are the responsibility of the caller. If the caller violates a (properly docu-\nmented!) precondition and the function doesn’t work correctly, the bug is in the caller, not\nthe function.\nIf the preconditions are satisfied and the postconditions are not, the bug is in the function.\nIf your pre- and postconditions are clear, they can help with debugging.",
+        "metadata": {
+          "page": 58,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p058",
+          "char_end": 1682,
+          "char_start": 968,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 36,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7654492398828735,
+        "automatic_evidence_match": true
+      },
+      {
+        "chunk_id": "01175b8e3709e58b34fcbe1f7ed21d3f23a398f5fdedfa3f5d4ddf2aab93e1c2",
+        "text": "4.12. Exercises 37\nFigure 4.1: Turtle flowers.\nFigure 4.2: Turtle pies.\ndocstring:A string that appears at the top of a function definition to document the func-\ntion’s interface.\nprecondition:A requirement that should be satisfied by the caller before a function starts.\npostcondition:A requirement that should be satisfied by the function before it ends.\n4.12 Exercises\nExercise 4.1.Download the code in this chapter fromhttps: // thinkpython. com/ code/\npolygon. py.\n1. Draw a stack diagram that shows the state of the program while executingcircle(bob,\nradius). You can do the arithmetic by hand or addprintstatements to the code.\n2. The version ofarcin Section 4.7 is not very accurate because the linear approximation of the\ncircle is always outside the true circle. As a result, the Turtle ends up a few pixels away from\nthe correct destination. My solution shows a way to reduce the effect of this error. Read the\ncode and see if it makes sense to you.",
+        "metadata": {
+          "page": 59,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p059",
+          "char_end": 960,
+          "char_start": 0,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 37,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.7048632502555847,
+        "automatic_evidence_match": false
+      },
+      {
+        "chunk_id": "74ff1afec1b959e426de188bfb2fc9d95b41a8af1bf8021f45926038a2555e1b",
+        "text": "36 Chapter 4. Case study: interface design\nIt is terse, but it contains the essential information someone would need to use this func-\ntion. It explains concisely what the function does (without getting into the details of how\nit does it). It explains what effect each parameter has on the behavior of the function and\nwhat type each parameter should be (if it is not obvious).\nWriting this kind of documentation is an important part of interface design. A well-\ndesigned interface should be simple to explain; if you have a hard time explaining one\nof your functions, maybe the interface could be improved.\n4.10 Debugging\nAn interface is like a contract between a function and a caller. The caller agrees to provide\ncertain parameters and the function agrees to do certain work.\nFor example,polylinerequires four arguments:thas to be a Turtle;nhas to be an integer;\nlengthshould be a positive number; andanglehas to be a number, which is understood\nto be in degrees.",
+        "metadata": {
+          "page": 58,
+          "source": "data/raw/thinkpython2.pdf",
+          "chapter": 4,
+          "page_id": "thinkpython2-p058",
+          "char_end": 967,
+          "char_start": 0,
+          "document_id": "thinkpython2",
+          "chunk_method": "heading-sentence-v1-1000",
+          "printed_page": 36,
+          "chapter_title": "Case study: interface design",
+          "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+        },
+        "score": 0.6817189455032349,
+        "automatic_evidence_match": false
+      }
+    ],
+    "human_grounding_0_2": 2,
+    "human_reason": "The passage includes the condition that preconditions hold but postconditions fail.",
+    "strategy": "C",
+    "applied_filter": {
+      "chapter": 4
+    },
+    "search_seconds": 0.03939490001357626,
+    "metadata_review": [
+      {
+        "chunk_id": "44a1b087f82368f2fbdca8f89743962928316ff86f9b948e962deeaf007434fd",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "01175b8e3709e58b34fcbe1f7ed21d3f23a398f5fdedfa3f5d4ddf2aab93e1c2",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      },
+      {
+        "chunk_id": "74ff1afec1b959e426de188bfb2fc9d95b41a8af1bf8021f45926038a2555e1b",
+        "source_correct": true,
+        "page_correct": true,
+        "chapter_correct": true,
+        "reason": "Source, physical PDF page and chapter were checked against the PDF."
+      }
+    ],
+    "review_status": "AUTHOR_REVIEWED",
+    "reviewed_by": "Lưu Văn Việt Đức"
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "model": "google/embeddinggemma-2",
+  "dimensions": 768,
+  "device": "cpu",
+  "split": "dev",
+  "benchmark_sha256": "e2d3a8cf68e9074de6ceedf5542cab08be685278adcd5eb50b061b0c127841b7",
+  "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94",
+  "strategies": {
+    "A": {
+      "method": "fixed",
+      "size_chars": 500,
+      "overlap_chars": 50,
+      "filter": false
+    },
+    "B": {
+      "method": "heading_sentence_heuristic",
+      "max_chars": 1000,
+      "filter": false
+    },
+    "C": {
+      "same_chunks_as": "B",
+      "filter": "Explicit query filter only"
+    },
+    "embedding_model": "google/embeddinggemma-2",
+    "dimensions": 768,
+    "distance": "cosine",
+    "vector_store": "PostgreSQL/pgvector",
+    "benchmark_sha256": "e2d3a8cf68e9074de6ceedf5542cab08be685278adcd5eb50b061b0c127841b7",
+    "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+  },
+  "python": "3.14.10",
+  "packages": {
+    "torch": "2.15.0+cpu",
+    "torchvision": "0.29.2+cpu",
+    "sentence-transformers": "6.3.0",
+    "transformers": "5.22.2",
+    "pypdf": "6.21.4",
+    "psycopg": "3.3.8",
+    "Pillow": "13.0.0"
+  }
+}

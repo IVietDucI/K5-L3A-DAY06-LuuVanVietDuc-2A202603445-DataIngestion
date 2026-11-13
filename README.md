@@ -45,3 +45,112 @@ Dùng cùng dữ liệu, model và câu hỏi cho cả ba cấu hình. Tách **1
 | Cách nộp bài | [SUBMISSION.md](SUBMISSION.md) |
 
 [data/format-example.json](data/format-example.json) chỉ minh họa định dạng, không phải corpus đủ điều kiện. Phần xử lý và benchmark do bạn tự hiện thực; không bắt buộc xây chatbot.
+
+## Bài làm cá nhân — Day 06
+
+- Học viên: Lưu Văn Việt Đức — 2A202603445 — L3A.
+- Corpus: 33 trang nội dung từ Think Python, 2nd Edition.
+- Embedding: google/embeddinggemma-2, chạy local.
+- Vector store: PostgreSQL + pgvector.
+- Báo cáo, cấu hình, môi trường và hướng dẫn setup/chạy:
+  [Báo cáo cá nhân](report/individual/2A202603445_LuuVanVietDuc.md).
+- Code chạy từ `starter`: `python -m src.run` cho dev và
+  `python scripts/run_test.py` cho test.
+
+  ## Setup và chạy bài làm cá nhân
+
+### 1. Chuẩn bị môi trường
+
+Cần Python và Docker Desktop. Môi trường đã thực nghiệm:
+Python 3.14.10 trên Windows, chạy embedding bằng CPU.
+
+Từ thư mục gốc repo:
+
+```powershell
+cd starter
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+
+python -m pip install -r requirements.txt
+python -m pip install torch==2.15.0 torchvision==0.29.2 --index-url https://download.pytorch.org/whl/cpu
+python -m pip install -r requirements-day06-extra.txt
+```
+
+### 2. Cấu hình
+
+Tạo `.env` nếu chưa có:
+
+```powershell
+if (!(Test-Path .env)) {
+    Copy-Item .env.example .env
+}
+```
+
+Trong `starter/.env`, đặt:
+
+```dotenv
+DATABASE_URL=postgresql://day6:day6_local_only@127.0.0.1:55433/day6_lab
+EMBEDDING_MODEL=google/embeddinggemma-2
+```
+
+Embedding chạy local, không cần Gemini API key. Lần đầu cần mạng
+để tải model từ Hugging Face. Không commit `.env` hoặc môi trường `.venv`.
+
+### 3. Dữ liệu
+
+- PDF gốc: `data/raw/thinkpython2.pdf`.
+- Manifest và danh sách 33 trang được chọn: `data/manifest.json`.
+- Nguồn PDF: https://greenteapress.com/thinkpython2/thinkpython2.pdf
+- Tác giả: Allen B. Downey.
+- Giấy phép: CC BY-NC 3.0.
+- Benchmark: `benchmark/thinkpython_questions.json`, gồm 15 dev và 5 test.
+
+Các đường dẫn trên tính từ gốc repo. Dữ liệu và benchmark đã được
+chuẩn bị, không cần tạo lại. Nếu tải lại PDF, phải đối chiếu SHA256
+trong manifest.
+
+### 4. Chạy pipeline
+
+Mở Docker Desktop. Chạy từ thư mục `starter`:
+
+```powershell
+docker compose -p day6_student_starter up -d --wait
+python scripts/check_setup.py
+python scripts/prepare_corpus.py
+python -m src.run
+python scripts/run_test.py
+```
+
+- `prepare_corpus.py`: đọc 33 trang, chuẩn hóa, tạo chunk A/B/C.
+- `src.run`: embedding tài liệu, lưu pgvector, kiểm tra nạp lại
+  không nhân đôi và đánh giá dev.
+- `run_test.py`: dùng vector tài liệu đã lưu và đánh giá 5 câu test.
+
+`src.run` tạo thư mục dev mới theo timestamp. `run_test.py` hiện
+tham chiếu lần dev gốc `20261113T112611135714Z` và lựa chọn trong
+`results/selection_C.json`. Giữ các minh chứng gốc để đối chiếu.
+
+Nếu tạo thí nghiệm mới, cần cập nhật đường dẫn dev trong script test
+và lưu hồ sơ lựa chọn riêng; không trình bày lần chạy lại là lần
+đánh giá holdout đầu tiên.
+
+### 5. Kết quả và minh chứng
+
+- `results/preparation/`: chunk, thống kê và nhãn coherence.
+- `results/dev/20261113T112611135714Z/`: trace và kết quả dev gốc.
+- `results/test/20261113T113600498881Z/`: trace và kết quả test.
+- `results/selection_C.json`: lựa chọn C trước test.
+- `artifacts/experiment_log.csv`: tổng hợp thí nghiệm A/B/C.
+- `report/individual/2A202603445_LuuVanVietDuc.md`: báo cáo cá nhân.
+
+Nhãn đã rà soát nằm trong `coherence_proposed.json` và
+`test_review_proposed.json`; xem trường `review_status`.
+Các file backup encoding và `finalize_lab.py` không cần chạy.
+
+### 6. Dừng database
+
+Dừng container nhưng giữ dữ liệu:
+
+```powershell
+docker compose -p day6_student_starter stop
+```

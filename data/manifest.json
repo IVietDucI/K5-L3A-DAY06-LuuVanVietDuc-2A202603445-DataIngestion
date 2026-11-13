@@ -1,0 +1,283 @@
+{
+  "source_id": "thinkpython2",
+  "title": "Think Python, 2nd Edition, Version 2.4.1",
+  "author": "Allen B. Downey",
+  "source_path_or_url": "data/raw/thinkpython2.pdf",
+  "source_url": "https://greenteapress.com/thinkpython2/thinkpython2.pdf",
+  "license_or_permission": "CC BY-NC 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-nc/3.0/",
+  "accessed_at": "2026-11-13T17:29:47.925471+07:00",
+  "sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94",
+  "total_pdf_pages": 244,
+  "selected_content_pages": 33,
+  "page_numbering": "Physical PDF page, starting at 1",
+  "selection_note": "Selected instructional pages from Chapters 1-4; front matter, header-only page 38, and trailing exercise pages 30, 37, 50, 60 are outside the selected scope.",
+  "filter_field": "chapter",
+  "filter_field_type": "integer",
+  "pages": [
+    {
+      "page_id": "thinkpython2-p023",
+      "page": 23,
+      "printed_page": 1,
+      "chapter": 1,
+      "chapter_title": "The way of the program",
+      "normalized_char_count": 1955
+    },
+    {
+      "page_id": "thinkpython2-p024",
+      "page": 24,
+      "printed_page": 2,
+      "chapter": 1,
+      "chapter_title": "The way of the program",
+      "normalized_char_count": 2673
+    },
+    {
+      "page_id": "thinkpython2-p025",
+      "page": 25,
+      "printed_page": 3,
+      "chapter": 1,
+      "chapter_title": "The way of the program",
+      "normalized_char_count": 1748
+    },
+    {
+      "page_id": "thinkpython2-p026",
+      "page": 26,
+      "printed_page": 4,
+      "chapter": 1,
+      "chapter_title": "The way of the program",
+      "normalized_char_count": 1945
+    },
+    {
+      "page_id": "thinkpython2-p027",
+      "page": 27,
+      "printed_page": 5,
+      "chapter": 1,
+      "chapter_title": "The way of the program",
+      "normalized_char_count": 2845
+    },
+    {
+      "page_id": "thinkpython2-p028",
+      "page": 28,
+      "printed_page": 6,
+      "chapter": 1,
+      "chapter_title": "The way of the program",
+      "normalized_char_count": 2622
+    },
+    {
+      "page_id": "thinkpython2-p029",
+      "page": 29,
+      "printed_page": 7,
+      "chapter": 1,
+      "chapter_title": "The way of the program",
+      "normalized_char_count": 2174
+    },
+    {
+      "page_id": "thinkpython2-p031",
+      "page": 31,
+      "printed_page": 9,
+      "chapter": 2,
+      "chapter_title": "Variables, expressions and statements",
+      "normalized_char_count": 1118
+    },
+    {
+      "page_id": "thinkpython2-p032",
+      "page": 32,
+      "printed_page": 10,
+      "chapter": 2,
+      "chapter_title": "Variables, expressions and statements",
+      "normalized_char_count": 1903
+    },
+    {
+      "page_id": "thinkpython2-p033",
+      "page": 33,
+      "printed_page": 11,
+      "chapter": 2,
+      "chapter_title": "Variables, expressions and statements",
+      "normalized_char_count": 2382
+    },
+    {
+      "page_id": "thinkpython2-p034",
+      "page": 34,
+      "printed_page": 12,
+      "chapter": 2,
+      "chapter_title": "Variables, expressions and statements",
+      "normalized_char_count": 2236
+    },
+    {
+      "page_id": "thinkpython2-p035",
+      "page": 35,
+      "printed_page": 13,
+      "chapter": 2,
+      "chapter_title": "Variables, expressions and statements",
+      "normalized_char_count": 2641
+    },
+    {
+      "page_id": "thinkpython2-p036",
+      "page": 36,
+      "printed_page": 14,
+      "chapter": 2,
+      "chapter_title": "Variables, expressions and statements",
+      "normalized_char_count": 1922
+    },
+    {
+      "page_id": "thinkpython2-p039",
+      "page": 39,
+      "printed_page": 17,
+      "chapter": 3,
+      "chapter_title": "Functions",
+      "normalized_char_count": 1130
+    },
+    {
+      "page_id": "thinkpython2-p040",
+      "page": 40,
+      "printed_page": 18,
+      "chapter": 3,
+      "chapter_title": "Functions",
+      "normalized_char_count": 1761
+    },
+    {
+      "page_id": "thinkpython2-p041",
+      "page": 41,
+      "printed_page": 19,
+      "chapter": 3,
+      "chapter_title": "Functions",
+      "normalized_char_count": 2578
+    },
+    {
+      "page_id": "thinkpython2-p042",
+      "page": 42,
+      "printed_page": 20,
+      "chapter": 3,
+      "chapter_title": "Functions",
+      "normalized_char_count": 1598
+    },
+    {
+      "page_id": "thinkpython2-p043",
+      "page": 43,
+      "printed_page": 21,
+      "chapter": 3,
+      "chapter_title": "Functions",
+      "normalized_char_count": 2486
+    },
+    {
+      "page_id": "thinkpython2-p044",
+      "page": 44,
+      "printed_page": 22,
+      "chapter": 3,
+      "chapter_title": "Functions",
+      "normalized_char_count": 1521
+    },
+    {
+      "page_id": "thinkpython2-p045",
+      "page": 45,
+      "printed_page": 23,
+      "chapter": 3,
+      "chapter_title": "Functions",
+      "normalized_char_count": 1817
+    },
+    {
+      "page_id": "thinkpython2-p046",
+      "page": 46,
+      "printed_page": 24,
+      "chapter": 3,
+      "chapter_title": "Functions",
+      "normalized_char_count": 1883
+    },
+    {
+      "page_id": "thinkpython2-p047",
+      "page": 47,
+      "printed_page": 25,
+      "chapter": 3,
+      "chapter_title": "Functions",
+      "normalized_char_count": 2526
+    },
+    {
+      "page_id": "thinkpython2-p048",
+      "page": 48,
+      "printed_page": 26,
+      "chapter": 3,
+      "chapter_title": "Functions",
+      "normalized_char_count": 2164
+    },
+    {
+      "page_id": "thinkpython2-p049",
+      "page": 49,
+      "printed_page": 27,
+      "chapter": 3,
+      "chapter_title": "Functions",
+      "normalized_char_count": 1561
+    },
+    {
+      "page_id": "thinkpython2-p051",
+      "page": 51,
+      "printed_page": 29,
+      "chapter": 4,
+      "chapter_title": "Case study: interface design",
+      "normalized_char_count": 1356
+    },
+    {
+      "page_id": "thinkpython2-p052",
+      "page": 52,
+      "printed_page": 30,
+      "chapter": 4,
+      "chapter_title": "Case study: interface design",
+      "normalized_char_count": 1676
+    },
+    {
+      "page_id": "thinkpython2-p053",
+      "page": 53,
+      "printed_page": 31,
+      "chapter": 4,
+      "chapter_title": "Case study: interface design",
+      "normalized_char_count": 2546
+    },
+    {
+      "page_id": "thinkpython2-p054",
+      "page": 54,
+      "printed_page": 32,
+      "chapter": 4,
+      "chapter_title": "Case study: interface design",
+      "normalized_char_count": 1791
+    },
+    {
+      "page_id": "thinkpython2-p055",
+      "page": 55,
+      "printed_page": 33,
+      "chapter": 4,
+      "chapter_title": "Case study: interface design",
+      "normalized_char_count": 2464
+    },
+    {
+      "page_id": "thinkpython2-p056",
+      "page": 56,
+      "printed_page": 34,
+      "chapter": 4,
+      "chapter_title": "Case study: interface design",
+      "normalized_char_count": 1689
+    },
+    {
+      "page_id": "thinkpython2-p057",
+      "page": 57,
+      "printed_page": 35,
+      "chapter": 4,
+      "chapter_title": "Case study: interface design",
+      "normalized_char_count": 2023
+    },
+    {
+      "page_id": "thinkpython2-p058",
+      "page": 58,
+      "printed_page": 36,
+      "chapter": 4,
+      "chapter_title": "Case study: interface design",
+      "normalized_char_count": 2460
+    },
+    {
+      "page_id": "thinkpython2-p059",
+      "page": 59,
+      "printed_page": 37,
+      "chapter": 4,
+      "chapter_title": "Case study: interface design",
+      "normalized_char_count": 1908
+    }
+  ]
+}

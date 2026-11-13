@@ -1,0 +1,43 @@
+{
+  "split": "test",
+  "selection": {
+    "selected_strategy": "C",
+    "reason": "B/C tied on development retrieval metrics. C additionally enforced explicit chapter scope and improved Q04 evidence rank from 3 to 2.",
+    "model": "google/embeddinggemma-2",
+    "dimensions": 768,
+    "benchmark_sha256": "e2d3a8cf68e9074de6ceedf5542cab08be685278adcd5eb50b061b0c127841b7",
+    "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94",
+    "chunk_hashes": {
+      "A": "4f619dd881a8fb3ca0ec6d1042d02aa1d635a8ef66d8d600d1d5f564a08db03f",
+      "B": "2f5350c38f5d82cd0ae1ac55ef8215a720599f0f11582e63a1d6113bac95a28a",
+      "C": "2f5350c38f5d82cd0ae1ac55ef8215a720599f0f11582e63a1d6113bac95a28a"
+    },
+    "dev_run": "20261113T112611135714Z",
+    "dev_summary_sha256": "18a4ae885a51da262dc1ac961a1eabacde0b5a661d86a4d75642f46435a4bfbe",
+    "embedding_code_sha256": "f4387d23513a1e0f83063c17b0fb0d4620699b4a080b3879ced02b69ca73d58b",
+    "strategies": {
+      "A": {
+        "method": "fixed",
+        "size_chars": 500,
+        "overlap_chars": 50,
+        "filter": false
+      },
+      "B": {
+        "method": "heading_sentence_heuristic",
+        "max_chars": 1000,
+        "filter": false
+      },
+      "C": {
+        "same_chunks_as": "B",
+        "filter": "Explicit query filter only"
+      },
+      "embedding_model": "google/embeddinggemma-2",
+      "dimensions": 768,
+      "distance": "cosine",
+      "vector_store": "PostgreSQL/pgvector",
+      "benchmark_sha256": "e2d3a8cf68e9074de6ceedf5542cab08be685278adcd5eb50b061b0c127841b7",
+      "source_sha256": "6033000bac3f9268ad75ee041bf8e5d9a3bc8a33bb156399cbd014918cb59f94"
+    }
+  },
+  "document_vectors": "Reused from existing pgvector table"
+}

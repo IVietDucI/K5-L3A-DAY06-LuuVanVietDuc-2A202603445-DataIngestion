@@ -1,0 +1,250 @@
+[
+  {
+    "id": "Q01",
+    "split": "dev",
+    "question": "Theo sách, kỹ năng quan trọng nhất của một nhà khoa học máy tính là gì?",
+    "expected_answer": "Giải quyết vấn đề (problem solving).",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 23,
+    "evidence_quote": "The single most important skill for a computer scientist isproblem solving.",
+    "filter": null,
+    "filter_origin": null,
+    "alternative_gold": []
+  },
+  {
+    "id": "Q02",
+    "split": "dev",
+    "question": "Một chương trình là gì?",
+    "expected_answer": "Một chuỗi chỉ dẫn xác định cách thực hiện một phép tính hoặc xử lý.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 23,
+    "evidence_quote": "Aprogramis a sequence of instructions that specifies how to perform a computation.",
+    "filter": null,
+    "filter_origin": null,
+    "alternative_gold": []
+  },
+  {
+    "id": "Q03",
+    "split": "dev",
+    "question": "Toán tử lũy thừa trong Python là gì?",
+    "expected_answer": "Toán tử **.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 25,
+    "evidence_quote": "Finally, the operator**performs exponentiation; that is, it raises a number to a power:",
+    "filter": null,
+    "filter_origin": null,
+    "alternative_gold": []
+  },
+  {
+    "id": "Q04",
+    "split": "dev",
+    "question": "Trong chương 1, nếu chưa biết kiểu dữ liệu của một giá trị thì kiểm tra bằng hàm nào?",
+    "expected_answer": "Dùng type(value), ví dụ type(2) trả về int.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 26,
+    "evidence_quote": "If you are not sure what type a value has, the interpreter can tell you: >>> type(2) <class'int'>",
+    "filter": {
+      "chapter": 1
+    },
+    "filter_origin": "Explicit chapter scope in the question",
+    "alternative_gold": []
+  },
+  {
+    "id": "Q05",
+    "split": "dev",
+    "question": "Quá trình xác định cấu trúc của một câu hoặc câu lệnh được gọi là gì?",
+    "expected_answer": "Parsing (phân tích cú pháp).",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 27,
+    "evidence_quote": "When you read a sentence in English or a statement in a formal language, you have to figure out the structure (although in a natural language you do this subconsciously). This process is calledparsing.",
+    "filter": null,
+    "filter_origin": null,
+    "alternative_gold": []
+  },
+  {
+    "id": "Q06",
+    "split": "dev",
+    "question": "Biến là gì và câu lệnh gán làm gì?",
+    "expected_answer": "Biến là tên tham chiếu tới một giá trị; câu lệnh gán tạo biến mới và gán giá trị cho nó.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 31,
+    "evidence_quote": "A variable is a name that refers to a value. 2.1 Assignment statements Anassignment statementcreates a new variable and gives it a value:",
+    "filter": null,
+    "filter_origin": null,
+    "alternative_gold": []
+  },
+  {
+    "id": "Q07",
+    "split": "dev",
+    "question": "Theo quy tắc trong sách, tên biến có thể bắt đầu bằng một chữ số không?",
+    "expected_answer": "Không; tên biến có thể chứa chữ và số nhưng không bắt đầu bằng số.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 32,
+    "evidence_quote": "Variable names can be as long as you like. They can contain both letters and numbers, but they can’t begin with a number.",
+    "filter": null,
+    "filter_origin": null,
+    "alternative_gold": []
+  },
+  {
+    "id": "Q08",
+    "split": "dev",
+    "question": "Một biểu thức được cấu thành từ những thành phần nào?",
+    "expected_answer": "Các giá trị, biến và toán tử.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 32,
+    "evidence_quote": "Anexpressionis a combination of values, variables, and operators.",
+    "filter": null,
+    "filter_origin": null,
+    "alternative_gold": []
+  },
+  {
+    "id": "Q09",
+    "split": "dev",
+    "question": "Trong chương 2, vì sao một biểu thức đứng riêng trong script không hiện kết quả, và cần làm gì để hiện kết quả?",
+    "expected_answer": "Script đánh giá biểu thức nhưng không tự hiển thị; cần dùng print.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 33,
+    "evidence_quote": "In script mode an expression, all by itself, has no visible effect. Python evaluates the expression, but it doesn’t display the result. To display the result, you need aprintstatement like this:",
+    "filter": {
+      "chapter": 2
+    },
+    "filter_origin": "Explicit chapter scope in the question",
+    "alternative_gold": []
+  },
+  {
+    "id": "Q10",
+    "split": "dev",
+    "question": "Khi các toán tử có cùng độ ưu tiên, thứ tự đánh giá thông thường là gì và ngoại lệ nào được sách nêu?",
+    "expected_answer": "Từ trái sang phải, ngoại trừ phép lũy thừa.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 34,
+    "evidence_quote": "Operators with the same precedence are evaluated from left to right (except exponen- tiation).",
+    "filter": null,
+    "filter_origin": null,
+    "alternative_gold": []
+  },
+  {
+    "id": "Q11",
+    "split": "dev",
+    "question": "Theo sách, một hàm là gì?",
+    "expected_answer": "Một chuỗi câu lệnh có tên để thực hiện một phép tính.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 39,
+    "evidence_quote": "In the context of programming, afunctionis a named sequence of statements that performs a computation.",
+    "filter": null,
+    "filter_origin": null,
+    "alternative_gold": []
+  },
+  {
+    "id": "Q12",
+    "split": "dev",
+    "question": "int chuyển một số thực thành số nguyên bằng cách làm tròn hay bỏ phần thập phân?",
+    "expected_answer": "Bỏ phần thập phân, không làm tròn.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 39,
+    "evidence_quote": "intcan convert floating-point values to integers, but it doesn’t round off; it chops off the fraction part:",
+    "filter": null,
+    "filter_origin": null,
+    "alternative_gold": []
+  },
+  {
+    "id": "Q13",
+    "split": "dev",
+    "question": "Dòng đầu của định nghĩa hàm được gọi là gì, kết thúc bằng dấu nào và phần thân phải trình bày ra sao?",
+    "expected_answer": "Header kết thúc bằng dấu hai chấm; body phải thụt lề.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 41,
+    "evidence_quote": "The first line of the function definition is called theheader; the rest is called thebody. The header has to end with a colon and the body has to be indented.",
+    "filter": null,
+    "filter_origin": null,
+    "alternative_gold": []
+  },
+  {
+    "id": "Q14",
+    "split": "dev",
+    "question": "Biến được tạo bên trong một hàm có phạm vi tồn tại thế nào?",
+    "expected_answer": "Là biến cục bộ, chỉ tồn tại bên trong hàm.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 44,
+    "evidence_quote": "When you create a variable inside a function, it islocal, which means that it only exists inside the function.",
+    "filter": null,
+    "filter_origin": null,
+    "alternative_gold": []
+  },
+  {
+    "id": "Q15",
+    "split": "dev",
+    "question": "Traceback cho biết những thông tin nào khi chương trình gặp lỗi?",
+    "expected_answer": "File và dòng xảy ra lỗi, các hàm đang thực thi, cùng dòng mã gây lỗi.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 46,
+    "evidence_quote": "This list of functions is called atraceback. It tells you what program file the error occurred in, and what line, and what functions were executing at the time. It also shows the line of code that caused the error.",
+    "filter": null,
+    "filter_origin": null,
+    "alternative_gold": []
+  },
+  {
+    "id": "Q16",
+    "split": "test",
+    "question": "Trong chương 4, việc gói một đoạn mã vào một hàm được gọi là gì?",
+    "expected_answer": "Encapsulation (đóng gói).",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 54,
+    "evidence_quote": "Wrapping a piece of code up in a function is calledencapsulation.",
+    "filter": {
+      "chapter": 4
+    },
+    "filter_origin": "Explicit chapter scope in the question",
+    "alternative_gold": []
+  },
+  {
+    "id": "Q17",
+    "split": "test",
+    "question": "Khi một hàm có nhiều đối số số học và dễ quên thứ tự, sách đề xuất cách gọi nào?",
+    "expected_answer": "Ghi tên tham số trong lời gọi, tức keyword arguments, ví dụ polygon(bob, n=7, length=70).",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 55,
+    "evidence_quote": "When a function has more than a few numeric arguments, it is easy to forget what they are, or what order they should be in. In that case it is often a good idea to include the names of the parameters in the argument list: polygon(bob, n=7, length=70)",
+    "filter": null,
+    "filter_origin": null,
+    "alternative_gold": []
+  },
+  {
+    "id": "Q18",
+    "split": "test",
+    "question": "Một giao diện hàm sạch giúp người gọi sử dụng hàm như thế nào?",
+    "expected_answer": "Cho phép người gọi làm điều họ muốn mà không phải xử lý các chi tiết không cần thiết.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 55,
+    "evidence_quote": "An interface is “clean” if it allows the caller to do what they want without dealing with unnecessary details.",
+    "filter": null,
+    "filter_origin": null,
+    "alternative_gold": []
+  },
+  {
+    "id": "Q19",
+    "split": "test",
+    "question": "Docstring nằm ở đâu và dùng để giải thích điều gì?",
+    "expected_answer": "Là chuỗi ở đầu hàm, giải thích giao diện của hàm.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 57,
+    "evidence_quote": "Adocstringis a string at the beginning of a function that explains the interface",
+    "filter": null,
+    "filter_origin": null,
+    "alternative_gold": []
+  },
+  {
+    "id": "Q20",
+    "split": "test",
+    "question": "Theo phần Debugging của chương 4, nếu preconditions được đáp ứng nhưng postconditions không đạt thì lỗi nằm ở đâu?",
+    "expected_answer": "Lỗi nằm trong hàm.",
+    "gold_source_id": "thinkpython2",
+    "gold_page": 58,
+    "evidence_quote": "If the preconditions are satisfied and the postconditions are not, the bug is in the function.",
+    "filter": {
+      "chapter": 4
+    },
+    "filter_origin": "Explicit chapter scope in the question",
+    "alternative_gold": []
+  }
+]

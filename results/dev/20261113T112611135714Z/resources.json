@@ -1,0 +1,31 @@
+{
+  "model_load_seconds": 11.14530800000648,
+  "shared_dev_query_embedding_seconds": 4.516596699992078,
+  "strategies": {
+    "A": {
+      "chunks": 162,
+      "document_embedding_seconds": 65.10223579999001,
+      "vectors_reused_from": null,
+      "first_store_seconds": 0.43470429998706095,
+      "count_after_first_ingest": 162,
+      "count_after_second_ingest": 162
+    },
+    "B": {
+      "chunks": 85,
+      "document_embedding_seconds": 60.67542249998951,
+      "vectors_reused_from": null,
+      "first_store_seconds": 0.45910969999386,
+      "count_after_first_ingest": 85,
+      "count_after_second_ingest": 85
+    },
+    "C": {
+      "chunks": 85,
+      "document_embedding_seconds": 0.0,
+      "vectors_reused_from": "B",
+      "first_store_seconds": 0.24819559999741614,
+      "count_after_first_ingest": 85,
+      "count_after_second_ingest": 85
+    }
+  },
+  "note": "C reuses B document vectors. All strategies reuse the same query vectors. Model runs locally without API calls; local compute/electricity costs are not measured."
+}

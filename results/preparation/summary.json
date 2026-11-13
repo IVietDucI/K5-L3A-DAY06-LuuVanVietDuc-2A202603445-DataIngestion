@@ -1,0 +1,28 @@
+{
+  "selected_pages": 33,
+  "statistics": {
+    "A": {
+      "chunks": 162,
+      "min_chars": 83,
+      "max_chars": 500,
+      "mean_chars": 453.75,
+      "total_chars": 73508
+    },
+    "B": {
+      "chunks": 85,
+      "min_chars": 113,
+      "max_chars": 1000,
+      "mean_chars": 788.82,
+      "total_chars": 67050
+    },
+    "C": {
+      "chunks": 85,
+      "min_chars": 113,
+      "max_chars": 1000,
+      "mean_chars": 788.82,
+      "total_chars": 67050
+    }
+  },
+  "benchmark_sha256": "e2d3a8cf68e9074de6ceedf5542cab08be685278adcd5eb50b061b0c127841b7",
+  "bc_chunks_identical": true
+}

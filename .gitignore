@@ -8,3 +8,7 @@ __pycache__/
 .DS_Store
 .pytest_cache/
 *.sqlite
+/day06_preparation/
+/starter/scripts/finalize_lab.py
+*.before_encoding_fix.json
+*.before_finalize

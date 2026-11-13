@@ -1,0 +1,7 @@
+{
+  "model_load_seconds": 8.236574200011091,
+  "shared_test_query_embedding_seconds": 1.3960373000008985,
+  "document_embedding_seconds": 0,
+  "document_vectors_reused": true,
+  "note": "No document re-embedding. Five query vectors are shared across A/B/C. No generation API calls."
+}
